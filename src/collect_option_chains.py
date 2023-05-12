@@ -13,8 +13,6 @@ import matplotlib.pyplot as plt
 import datetime
 
 
-#yf.pdr_override()
-
 stocks =['IWM', 'SPY', 'SNAP', 'SLV', 'QQQ', 'XLF', 'XLE']
 options = pd.DataFrame()
 today = datetime.date.today().strftime('%Y-%m-%d')
@@ -37,10 +35,4 @@ for x in stocks:
 
 
 options.to_csv('option_prices.csv', mode='a', header=False, index=False)
-
-
-import pytz
-tz = pytz.timezone('EST')
-
-datetime.date.today().strftime('%Y-%m-%d')
 
