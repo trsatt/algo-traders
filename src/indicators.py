@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 import yfinance as yf
 
 
-
 def sma(df, window=20):
     df = df[['Price']]
     sma = df.rolling(window=window).mean()
