@@ -3,6 +3,7 @@
 """
 Created on Mon Feb  7 12:31:04 2022
 @author: troysattgast
+@todo:  functionalize
 """
 
 import yfinance as yf
@@ -11,11 +12,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import datetime
 
-
-##############################################################################
-
-
-
+############################################################
 #Find the difference between stock price and strike price
 #Multiply the result by open interest at that strike
 #Add together the dollar value for the put and call at that strike
@@ -32,8 +29,6 @@ expiry = exps[1]
 options = tk.option_chain(expiry)
 options.calls['type'] = 'call'
 options.puts['type'] = 'put'
-
-
 
 
 calls = options.calls
